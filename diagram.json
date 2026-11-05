@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "Semaforo 5 LEDs Alinhados",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -210.6, "left": 201, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "carRed",
+      "top": -339.6,
+      "left": 61.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "carYel",
+      "top": -339.6,
+      "left": 119,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "carGrn",
+      "top": -339.6,
+      "left": 167,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-led", "id": "pedRed", "top": 6, "left": 215, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "pedGrn", "top": 6, "left": 263, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn",
+      "top": 15.8,
+      "left": 115.2,
+      "attrs": { "color": "blue" }
+    },
+    { "type": "wokwi-buzzer", "id": "bz", "top": -324, "left": 280.2, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -204.8,
+      "left": -167.2,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "carRed:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "carYel:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "carGrn:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "pedRed:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "pedGrn:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "btn:2.pth", "uno:GND.1", "black", [ "v0" ] ],
+    [ "bz:2", "uno:GND.1", "black", [ "v0" ] ],
+    [ "carRed:A", "uno:12", "red", [ "v0" ] ],
+    [ "carYel:A", "uno:11", "yellow", [ "v0" ] ],
+    [ "carGrn:A", "uno:10", "green", [ "v0" ] ],
+    [ "pedRed:A", "uno:7", "red", [ "v0" ] ],
+    [ "pedGrn:A", "uno:6", "green", [ "v0" ] ],
+    [ "btn:1.pth", "uno:2", "blue", [ "v0" ] ],
+    [ "bz:1", "uno:4", "purple", [ "v0" ] ],
+    [ "lcd:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "lcd:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "lcd:SDA", "uno:A4", "green", [ "v0" ] ],
+    [ "lcd:SCL", "uno:A5", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
